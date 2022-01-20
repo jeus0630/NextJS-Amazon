@@ -2,14 +2,19 @@ import Head from "next/head";
 import {AppBar, Container, Link, Toolbar, Typography} from "@mui/material";
 import useStlyes from "../utils/styles";
 import NextLink from "next/link";
+import {useDispatch} from "react-redux";
 
-const Layout = ({children}) => {
+
+const Layout = ({children, title}) => {
+    const dispatch = useDispatch();
+
+
     const classes = useStlyes();
-    console.log(classes);
+
     return (
         <div>
             <Head>
-                <title>Next Amazona</title>
+                <title>{title ? `${title} - Next Amazona` : `Next Amazona`}</title>
             </Head>
             <AppBar position={"static"} className={classes.navbar}>
                 <Toolbar>

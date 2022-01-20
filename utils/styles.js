@@ -20,6 +20,10 @@ const useStlyes = makeStyles({
     },
     grow: {
         flexGrow : 1
+    },
+    section: {
+        marginTop : '10px',
+        marginBottom : '10px'
     }
 })
 
